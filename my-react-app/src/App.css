@@ -1,0 +1,146 @@
+.lyric-line {
+  transition: all 0.3s ease-in-out;
+}
+
+.lyric-line.active {
+  color: #00ffcc;
+  font-weight: bold;
+}
+/* App.css */
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  overflow: hidden; /* Prevent the page from scrolling */
+  background-color: #121212; /* Dark background */
+  color: #ffffff; /* White text */
+  font-family: "Segoe UI", sans-serif;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh; /* Take up full height */
+  justify-content: center; /* Center vertically */
+}
+
+.lyrics-container {
+  flex: 1; /* Takes remaining space */
+  overflow-y: auto; /* Enable scrolling for the lyrics */
+  padding: 40px;
+  background-color: #1e1e1e;
+  font-size: 32px;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+audio {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 48px;
+  background-color: #121212;
+  border-top: 1px solid #333;
+  z-index: 999;
+  margin: 0;
+  padding: 0;
+}
+
+.upload-button {
+  background-color: #00ffe0; /* Bright color for the button */
+  color: #121212; /* Dark text for contrast */
+  border: none;
+  border-radius: 8px; /* Rounded corners */
+  padding: 12px 24px; /* Add some padding */
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.upload-button:hover {
+  background-color: #00bfae; /* Darker shade of the button color when hovered */
+}
+
+.upload-button:focus {
+  outline: none; /* Remove the default focus outline */
+}
+
+.upload-button:active {
+  background-color: #009f8f; /* Even darker shade when the button is pressed */
+  transform: scale(1); /* Reset the size when the button is pressed */
+}
+
+/* Style for the custom audio progress bar */
+.audio-progress {
+  width: 100%;
+  height: 8px;
+  background: #333; /* Dark background */
+  border-radius: 5px; /* Rounded edges */
+  outline: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+/* Handle (thumb) of the progress bar */
+.audio-progress::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 16px;
+  height: 16px;
+  background: #00bfff; /* Bright blue color */
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+/* For Firefox */
+.audio-progress::-moz-range-thumb {
+  width: 16px;
+  height: 16px;
+  background: #00bfff;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+/* Hover effect for the thumb */
+.audio-progress::-webkit-slider-thumb:hover {
+  background: #0099cc; /* Darker blue on hover */
+}
+
+/* Focus state for the slider */
+.audio-progress:focus {
+  outline: none;
+}
+
+/* Active state for the slider when dragging */
+.audio-progress:active {
+  background: #444;
+}
+
+*::-webkit-scrollbar {
+  width: 12px; /* Adjust the width of the scrollbar */
+}
+
+/* Style for the scrollbar thumb (the draggable part) */
+*::-webkit-scrollbar-thumb {
+  background-color: #00ffe0; /* Blue color for the thumb */
+  border-radius: 10px; /* Rounded corners */
+  /* Optional border to make it more visible */
+}
+
+/* Style for the scrollbar when hovered */
+*::-webkit-scrollbar-thumb:hover {
+  background-color: #0099cc; /* Slightly darker blue on hover */
+}
+
+/* Style for the scrollbar track (the part the thumb slides on) */
+*::-webkit-scrollbar-track {
+  background-color: #333; /* Light background color for the track */
+  border-radius: 10px; /* Rounded track */
+}
+
+/* Optional: Customize scrollbar when scrolling */
+*::-webkit-scrollbar:vertical {
+  background-color: #333;
+}
